@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}
+    Newseer read
+{% endblock %}
+
+{% block content %}
+    <div class='news-wrapper'>
+        {% for news in news_list %}
+        <h1>
+            <a href="/news/{{ news.id }}">{{ news.article }}</a>
+        </h1>
+    </div>
+{% endfor %}
+
+{% endblock %}
